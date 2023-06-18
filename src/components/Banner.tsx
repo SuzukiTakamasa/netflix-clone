@@ -17,7 +17,6 @@ export const Banner = () => {
         async function fetchData() {
             const request = await axios.get(requests.feachNetflixOriginals);
             console.log(request.data.result);
-
             //Fetch a random value from an API request
             setMovie(
                 request.data.requests[
