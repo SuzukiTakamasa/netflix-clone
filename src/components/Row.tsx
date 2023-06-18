@@ -37,18 +37,18 @@ export const Row = ({title, fetchUrl, isLargeRow}: Props) => {
     return (
         <div className="Row">
             <h2>{title}</h2>
-                <div className="Row-posters">
-                    {movies.map((movie, i) => (
-                        <img
-                            key={movie.id}
-                            className={`Row-poster ${isLargeRow && "Row-poster-large"}`}
-                            src={`${base_url}${
-                                isLargeRow ? movie.poster_path : movie.backdrop_path
-                            }`}
-                            alt={movie.name}
-                        />
-                    ))}
-                </div>
+            <div className="Row-posters">
+                {movies.map((movie, i) => (
+                    <img
+                        key={movie.id}
+                        className={`Row-poster ${isLargeRow && "Row-poster-large"}`}
+                        src={`${base_url}${
+                            isLargeRow ? movie.poster_path : movie.backdrop_path
+                        }`}
+                        alt={movie.name}
+                    />
+                ))}
+            </div>
         </div>
     )
 };
