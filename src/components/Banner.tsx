@@ -9,7 +9,8 @@ type movieProps = {
     original_name?: string;
     backdrop_path?: string;
     overview?: string;
-}
+};
+
 
 export const Banner = () => {
     const [movie, setMovie] = useState<movieProps>({})

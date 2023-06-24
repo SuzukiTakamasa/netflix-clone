@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { requests } from './request';
 import { Row } from './components/Row';

@@ -8,7 +8,7 @@ type Props = {
     title: string;
     fetchUrl: string;
     isLargeRow?: boolean;
-}
+};
 
 type Movie = {
     id: string;
@@ -17,7 +17,7 @@ type Movie = {
     original_name: string;
     poster_path: string;
     backdrop_path: string;
-}
+};
 
 
 export const Row = ({title, fetchUrl, isLargeRow}: Props) => {
