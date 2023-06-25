@@ -79,6 +79,7 @@ export const Row = ({title, fetchUrl, isLargeRow}: Props) => {
                     />
                 ))}
             </div>
+            {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
         </div>
     )
 };
