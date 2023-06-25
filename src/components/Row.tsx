@@ -74,6 +74,7 @@ export const Row = ({title, fetchUrl, isLargeRow}: Props) => {
                             isLargeRow ? movie.poster_path : movie.backdrop_path
                         }`}
                         alt={movie.name}
+                        onClick={() => handleClick(movie)}
                     />
                 ))}
             </div>
