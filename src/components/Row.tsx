@@ -19,9 +19,18 @@ type Movie = {
     backdrop_path: string;
 };
 
+type Options = {
+    height: string;
+    width: string;
+    playerVars: {
+        autoplay: 0 | 1 | undefined;
+    };
+};
+
 
 export const Row = ({title, fetchUrl, isLargeRow}: Props) => {
     const [movies, setMovies] = useState<Movie[]>([]);
+    const [trailerUrl, setTrailerUrl] = useState<string | null>("");
 
     useEffect(() => {
         async function fetchData() {
@@ -31,6 +40,25 @@ export const Row = ({title, fetchUrl, isLargeRow}: Props) => {
         }
         fetchData();
     }, [fetchUrl]);
+
+    const opts: Options = {
+        height: "390",
+        width: "640",
+        playerVars: {
+            autoplay: 1,
+        },
+    };
+
+    const handleClick = async (movie: Movie) => {
+        if (trailerUrl) {
+            setTrailerUrl("");
+        } else {
+            let trailerurl = await axios.get(
+                `/movie/${movie.id}/video?api_key=${process.env.API_KEY}`
+            );
+            setTrailerUrl(trailerurl.data.resluts[0]?.key);
+        }
+    };
 
     console.log(movies);
 
