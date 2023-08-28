@@ -1,4 +1,5 @@
-const API_KEY = process.env.API_KEY;
+//const API_KEY = process.env.REACT_APP_API_KEY;
+export const API_KEY = "19e342642a04f1b8a6ca677ab916da12"
 
 export const requests = {
     feachTrending:`/trending/all/week?api_key=${API_KEY}&language=en-us`,
