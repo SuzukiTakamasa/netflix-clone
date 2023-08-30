@@ -1,4 +1,4 @@
-//const API_KEY = process.env.REACT_APP_API_KEY;
+//export const API_KEY = import.meta.env.VITE_API_KEY;
 export const API_KEY = "19e342642a04f1b8a6ca677ab916da12"
 
 export const requests = {
